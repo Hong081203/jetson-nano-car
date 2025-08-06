@@ -128,5 +128,23 @@ jetson@nano:~/ros2_ws/src/monicar3/script$  ./camSelect.sh usbcam
 
 추가로 jetson@nano:~/ros2_ws$ sudo apt update와
 
-jetson@nano:~/ros2_ws$ sudo apt install libgomp1 ros-galactic-joy-* ros-galactic-ackermann-msgs ros-galactic-image-pipeline -y를 실행시켜 또 다른 페키지를 받는다.
- 
+jetson@nano:~/ros2_ws$ sudo apt install libgomp1 ros-galactic-joy-* ros-galactic-ackermann-msgs ros-galactic-image-pipeline -y를 실행시켜 또 다른 페키지를 받아줬다.
+
+이제 자동차와 카메라가 서로 연결되도록 해야한다.
+
+ jetson@nano:~/ros2_ws$ ls /dev/vi* 를 실행시키고
+
+USB camera port 번호 설정을 위해 다음 명령어를 실행시켜줬다.
+
+jetson@nano:~/ros2_ws$ ls /dev/video*
+
+jetson@nano:~$ cd ~/ros2_ws/src/monicar3/monicar3_cv/param
+
+jetson@nano:~/ros2_ws/src/monicar3/monicar3_cv/param$ gedit camera.yaml
+
+jetson@nano:~$ cd ~/ros2_ws/
+
+jetson@nano:~$ cbpa monicar3
+
+이후 카메라 확인을 위해 터미널1에는 jetson@nano:~/ros2_ws$ ros2 launch monicar3_cv usbcam.launch.py 터미널2에는 jetson@nano:~$ ros2 run image_view image_view --ros-args --remap /image:=/image_raw
+
