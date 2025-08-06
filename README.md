@@ -125,3 +125,6 @@ jetson@nano:~/ros2_ws/src/monicar3/script$ ./carSelect.sh pca9685Steer
 jetson@nano:~/ros2_ws/src/monicar3/script$  ./camSelect.sh usbcam
 
 위 명령어를 실행시켜준다.
+
+추가로 jetson@nano:~/ros2_ws$ sudo apt update와 jetson@nano:~/ros2_ws$ sudo apt install libgomp1 ros-galactic-joy-* ros-galactic-ackermann-msgs ros-galactic-image-pipeline -y를 실행시켜 또 다른 페키지를 받는다.
+ 
