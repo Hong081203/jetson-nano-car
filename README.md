@@ -58,6 +58,24 @@ jetson@nano:~$ timedatectl
 
 jetson@nano:~$ ifconfig 를 실행시켜 네트워크 인터페이스의 상태를 확인한다. ifconfig는 인터페이스 설정의 줄임말이다.
 
-우리는 여기서 잭슨나노가 열을 뿜어내는걸 보고 쿨링팬은 작동시키기 위해 cd Downloads 명령어를 실행시키고 jetson@nano:~/Downloads$ cd jetson-fan-ctl를 실행시켜 쿨링팬 디렉토리를 찾는다.
+우리는 여기서 잭슨나노가 열을 뿜어내는걸 보고 쿨링팬은 작동시키기 위해 cd Downloads 명령어를 실행시키고 jetson@nano:~/Downloads$ cd jetson-fan-ctl를 실행시켜 쿨링팬 디렉토리를 찾을 수 있다.
 
-이후 jetson@nano:~/Downloads/jetson-fan-ctl$ sudo sh install.sh 를 통해 쿨링팬 디렉토리를 다운로드 하여 쿨링팬을 작
+이후 jetson@nano:~/Downloads/jetson-fan-ctl$ sudo sh install.sh 를 통해 쿨링팬 디렉토리를 다운로드 하여 쿨링팬을 작동시켰다.
+
+I2C 장치 연결을 확인하기 위해 jetson@nano:~$ i2cdetect -y -r 1 명령어를 실행한다. (pca9685 통신장치)
+
+ROS2를 이용해야 하므로 ROS2를 깔아줘야한다. 근데 그전 script를 설치해줘야한다. 따라서 다음 명령어들을 순서대로 실행시켜준다.
+
+jetson@nano:~/Downloads$ ls
+
+jetson@nano:~/Downloads$ git clone -b galactic https://github.com/zeta0707/installROS2.git
+
+jetson@nano:~/Downloads$ ls
+
+jetson@nano:~/Downloads$ cd installROS2/
+
+jetson@nano:~/Downloads/installROS2$ ls
+
+jetson@nano:~/Downloads$ cd installROS2
+
+jetson@nano:~/Downloads/installROS2$ ./install-ros2.sh
