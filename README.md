@@ -97,3 +97,31 @@ jetson@nano:~/ros2_ws$ cba
 터미널2  jetson@nano:~/ros2_ws$ ros2 run demo_nodes_py listener
 
 Hello World가 나타나는 것을 볼 수 있다.
+
+turtlesim test를 하기위해 다음 명령어를 순서대로 실행시켜줬다.
+
+jetson@nano:~/ros2_ws$ sudo apt update
+
+sudo apt install ros-foxy-turtlesim
+
+jetson@nano:~/ros2_ws$ sudo apt install ros-foxy-turtlesim
+
+jetson@nano:~/ros2_ws$ ros2 pkg list | grep turtlesim
+
+jetson@nano:~/ros2_ws$ ros2 pkg executables turtlesim
+
+그리고 터미널 2개 모두 open이라 쓰고 실행시키면 거북이가 있는 창이 등장하고 화살표로 조종이 가능하다.
+
+또한 거북이의 동작을 확인하기 위해 topic list를 통해 알 수 있다.
+
+이제 젝슨에 monicar3를 설치하기 위해 jetson@nano:~/ros2_ws$  cd ~/ros2_ws/src를 실행하고
+
+jetson@nano:~/ros2_ws/src$ cd monicar3/
+
+jetson@nano:~/ros2_ws/src/monicar3$ cd script/
+
+jetson@nano:~/ros2_ws/src/monicar3/script$ ./carSelect.sh pca9685Steer
+
+jetson@nano:~/ros2_ws/src/monicar3/script$  ./camSelect.sh usbcam
+
+위 명령어를 실행시켜준다.
