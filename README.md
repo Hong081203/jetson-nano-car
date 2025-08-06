@@ -5,6 +5,8 @@
 
 이후 터미널을 열어 다음 명령어를 실행했다.
 
+터미널에서 $를 기준으로 jetson@nano:~는 위치를 나타내고 $ 오른쪽은 명령어를 뜻한다.
+
 jetson@nano:~$ sudo apt-get update
 
 jetson@nano:~$ sudo apt-get install fcitx-hangul
