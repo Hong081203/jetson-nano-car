@@ -1,4 +1,4 @@
-# jetson-nano-car
+# ROS2_RC_YOLO11
 잭슨나노를 이용하여 GUI창을 띄웠다.
 
 터미널을 열어 다음 명령어를 실행했다.
