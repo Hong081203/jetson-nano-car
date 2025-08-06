@@ -19,7 +19,10 @@ jetson@nano:~$ sudo timedatectl set-timezone 'Asia/Seoul'
 
 jetson@nano:~$ timedatectl
 
-이후 jetson@nano:~$ free -m 를 실행시켜준다. 여기서 m은 메모리를 뜻한다.
+메모리 사용량을 확인하기 위해 jetson@nano:~$ free -m 를 실행시켜준다. 여기서 m은 메모리를 뜻한다.
 
-명령어를 통해 메모리 사용량을 확인할 수 있다.
+또 디스크 사용량을 확인하기 위해 jetson@nano:~$  df -h 를 실행시켜준다. 여기서 h는 human-readable의 약자다.
 
+와이파이 연결을 위해 jetson@nano:~$ sudo nmcli device wifi connect <ssid_name> password <password>를 실행시킨다.
+
+jetson@nano:~$ ifconfig 를 실행시켜 네트워크 인터페이스의 상태를 확인한다. ifconfig는 인터페이스 설정의 줄임말이다.
