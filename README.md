@@ -124,6 +124,12 @@ jetson@nano:~/ros2_ws/src/monicar3/script$ ./carSelect.sh pca9685Steer
 
 jetson@nano:~/ros2_ws/src/monicar3/script$  ./camSelect.sh usbcam
 
+jetson@nano:~/ros2_ws/src/monicar3/script$  cd ~/ros2_ws
+
+jetson@nano:~/ros2_ws$ cba
+
+jetson@nano:~/ros2_ws$ source ~/.bashrc
+
 위 명령어를 실행시켜준다.
 
 추가로 jetson@nano:~/ros2_ws$ sudo apt update와
@@ -149,9 +155,11 @@ jetson@nano:~$ cbpa monicar3
 이후 카메라 확인을 위해
 
 터미널1에는 jetson@nano:~/ros2_ws$ ros2 launch monicar3_cv usbcam.launch.py
+
            jetson@nano:~/ros2_ws$  ros2 launch monicar3_cv usbcam.launch.py를 실행시키고
 
 터미널2에는 jetson@nano:~$ ros2 run image_view image_view --ros-args --remap /image:=/image_raw
+
            jetson@nano:~/ros2_ws$  ros2 run image_view image_view --ros-args --remap 를 실행시켜줬다.
 
 그 결과 카메라가 작동하는 것을 확인할 수 있었다.
