@@ -3,9 +3,9 @@
 
 먼저 잭슨나노를 이용하여 GUI창을 띄웠다.
 
-이후 터미널을 열어 다음 명령어를 실행했다.
+이후 터미널을 연다. 터미널에서 $를 기준으로 jetson@nano:~는 위치를 나타내고 $ 오른쪽은 명령어를 뜻한다.
 
-터미널에서 $를 기준으로 jetson@nano:~는 위치를 나타내고 $ 오른쪽은 명령어를 뜻한다.
+터미널을 통해 다음 명령어를 실행시켜줬다.
 
 jetson@nano:~$ sudo apt-get update
 
@@ -18,4 +18,8 @@ jetson@nano:~$ sudo apt-get install fcitx-hangul
 jetson@nano:~$ sudo timedatectl set-timezone 'Asia/Seoul'
 
 jetson@nano:~$ timedatectl
+
+이후 jetson@nano:~$ free -m 를 실행시켜준다. 여기서 m은 메모리를 뜻한다.
+
+명령어를 통해 메모리 사용량을 확인할 수 있다.
 
