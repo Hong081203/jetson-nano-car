@@ -146,5 +146,12 @@ jetson@nano:~$ cd ~/ros2_ws/
 
 jetson@nano:~$ cbpa monicar3
 
-이후 카메라 확인을 위해 터미널1에는 jetson@nano:~/ros2_ws$ ros2 launch monicar3_cv usbcam.launch.py 터미널2에는 jetson@nano:~$ ros2 run image_view image_view --ros-args --remap /image:=/image_raw
+이후 카메라 확인을 위해
 
+터미널1에는 jetson@nano:~/ros2_ws$ ros2 launch monicar3_cv usbcam.launch.py
+           jetson@nano:~/ros2_ws$  ros2 launch monicar3_cv usbcam.launch.py를 실행시키고
+
+터미널2에는 jetson@nano:~$ ros2 run image_view image_view --ros-args --remap /image:=/image_raw
+           jetson@nano:~/ros2_ws$  ros2 run image_view image_view --ros-args --remap 를 실행시켜줬다.
+
+그 결과 카메라가 작동하는 것을 확인할 수 있었다.
