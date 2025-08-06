@@ -1,6 +1,7 @@
 # ROS2_RC_YOLO11
-잭슨나노를 이용하여 GUI창을 띄웠다.
+잭슨나노와 YOLO11을 통해 RC카를 작동 시켜보기로 계획했다.
 
+먼저 잭슨나노를 이용하여 GUI창을 띄웠다.
 터미널을 열어 다음 명령어를 실행했다.
 [~$ sudo apt-get update]
 ~$ sudo apt-get install fcitx-hangul
