@@ -79,3 +79,21 @@ jetson@nano:~/Downloads/installROS2$ ls
 jetson@nano:~/Downloads$ cd installROS2
 
 jetson@nano:~/Downloads/installROS2$ ./install-ros2.sh
+
+다음으로 jetson@nano:~$  gedit ~/.bashrc를 실행시켜 에디터를 열고 117~118줄에 받은 코드를 넣는다. 그리고 ROS2 ID를 106으로 바꿨다.
+
+이제 에디터를 닫고 jetson@nano:~$ source ~/.bashrc를 실행시켰다.
+
+jetson@nano:~/ros2_ws$ cca
+
+jetson@nano:~/ros2_ws$ cba
+
+위 두 명령어를 실행시켜 ros2 workspace를 설치해준다. 이는 내가 만드는 ROS2 프로젝트들의 집합을 관리하는 폴더 구조로 볼 수 있다.
+
+이제 ROS2가 제대로 설치됐는지 확인하기 위해 터미널을 추가로 열고 각각 따로 다음 명령어를 실행시켜준다.
+
+터미널1  jetson@nano:~/ros2_ws$ ros2 run demo_nodes_cpp talker
+
+터미널2  jetson@nano:~/ros2_ws$ ros2 run demo_nodes_py listener
+
+Hello World가 나타나는 것을 볼 수 있다.
