@@ -33,7 +33,6 @@ jetson@nano:~$ ifconfig 를 실행시켜 네트워크 인터페이스의 상태�
 우리는 여기서 잭슨나노가 열을 뿜어내는걸 보고 쿨링팬은 작동시키기 위해 cd Downloads 명령어를 실행시키고 jetson@nano:~/Downloads$ cd jetson-fan-ctl를 실행시켜 쿨링팬 디렉토리를 찾는다.
 
 이후 jetson@nano:~/Downloads/jetson-fan-ctl$ sudo sh install.sh 를 통해 쿨링팬 디렉토리를 다운로드 하여 쿨링팬을 작 ROS2_RC_YOLO11
-잭슨나노와 YOLO11을 통해 RC카를 작동 시켜보기로 계획했다.
 
 먼저 잭슨나노를 이용하여 GUI창을 띄웠다.
 
